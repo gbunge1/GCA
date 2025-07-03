@@ -22,15 +22,18 @@ body {
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-weight: bold;
   font-size: 1.2rem;
+  overflow: hidden;
+  height: 80px; /* Keep navbar height compact */
 }
 
 .logo img {
-  height: 80px;
+  height: 160px;
   width: auto;
+  display: block;
 }
 
 .give-btn {
