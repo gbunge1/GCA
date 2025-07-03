@@ -30,32 +30,34 @@
     </div>
   </section>
   <script>
-    // Simple confetti effect
+    // Water drop confetti effect
     function launchConfetti() {
-      const confettiColors = ['#fcd20f', '#76a9c3', '#fff', '#eaf6f9', '#333'];
+      const waterColors = ['#4fc3f7', '#039be5', '#81d4fa', '#0288d1', '#b3e5fc'];
       for (let i = 0; i < 80; i++) {
-        const confetti = document.createElement('div');
-        confetti.style.position = 'fixed';
-        confetti.style.zIndex = 9999;
-        confetti.style.width = '10px';
-        confetti.style.height = '10px';
-        confetti.style.borderRadius = '50%';
-        confetti.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.top = '-20px';
-        confetti.style.opacity = 0.8;
-        confetti.style.pointerEvents = 'none';
-        document.body.appendChild(confetti);
+        const drop = document.createElement('div');
+        drop.style.position = 'fixed';
+        drop.style.zIndex = 9999;
+        drop.style.width = '12px';
+        drop.style.height = '20px';
+        drop.style.background = waterColors[Math.floor(Math.random() * waterColors.length)];
+        drop.style.left = Math.random() * 100 + 'vw';
+        drop.style.top = '-30px';
+        drop.style.opacity = 0.85;
+        drop.style.pointerEvents = 'none';
+        drop.style.borderRadius = '50% 50% 60% 60% / 60% 60% 100% 100%';
+        drop.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+        drop.style.boxShadow = `0 2px 8px 0 rgba(33,150,243,0.15)`;
+        document.body.appendChild(drop);
 
-        const fall = confetti.animate([
-          { transform: `translateY(0)` },
-          { transform: `translateY(${window.innerHeight + 40}px) rotate(${Math.random() * 360}deg)` }
+        const fall = drop.animate([
+          { transform: drop.style.transform },
+          { transform: `${drop.style.transform} translateY(${window.innerHeight + 60}px)` }
         ], {
-          duration: 1200 + Math.random() * 1200,
+          duration: 1400 + Math.random() * 1200,
           easing: 'ease-in'
         });
 
-        fall.onfinish = () => confetti.remove();
+        fall.onfinish = () => drop.remove();
       }
     }
 
