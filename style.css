@@ -1,0 +1,105 @@
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #eaf6f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  width: 24px;
+  height: 24px;
+}
+
+.give-btn {
+  background-color: #fcd20f;
+  color: #000;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #76a9c3;
+  padding: 3rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  color: white;
+  padding-right: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #e6f3f8;
+}
+
+.cta-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 450px;
+}
+
+.cta-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.cta-form button {
+  background-color: #fcd20f;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
