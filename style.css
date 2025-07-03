@@ -22,12 +22,12 @@ body {
 
 .logo {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   font-weight: bold;
   font-size: 1.2rem;
   overflow: hidden;
-  height: 80px; /* Keep navbar height compact */
+  height: auto; /* Restore original alignment and height */
 }
 
 .logo img {
