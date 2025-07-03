@@ -30,7 +30,7 @@
     </div>
   </section>
   <script>
-    // Water drop confetti effect
+    // More realistic raindrop confetti effect
     function launchConfetti() {
       const waterColors = ['#4fc3f7', '#039be5', '#81d4fa', '#0288d1', '#b3e5fc'];
       for (let i = 0; i < 80; i++) {
@@ -38,15 +38,29 @@
         drop.style.position = 'fixed';
         drop.style.zIndex = 9999;
         drop.style.width = '12px';
-        drop.style.height = '20px';
+        drop.style.height = '22px';
         drop.style.background = waterColors[Math.floor(Math.random() * waterColors.length)];
         drop.style.left = Math.random() * 100 + 'vw';
         drop.style.top = '-30px';
-        drop.style.opacity = 0.85;
+        drop.style.opacity = 0.88;
         drop.style.pointerEvents = 'none';
+        // Raindrop shape: pointy at the bottom, round at the top
         drop.style.borderRadius = '50% 50% 60% 60% / 60% 60% 100% 100%';
-        drop.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
-        drop.style.boxShadow = `0 2px 8px 0 rgba(33,150,243,0.15)`;
+        drop.style.transform = `rotate(${Math.random() * 20 - 10}deg) scaleX(0.8)`;
+        drop.style.boxShadow = `0 2px 8px 0 rgba(33,150,243,0.10)`;
+
+        // Add a "tail" for the raindrop using a pseudo-element approach
+        const tail = document.createElement('div');
+        tail.style.position = 'absolute';
+        tail.style.left = '4px';
+        tail.style.top = '18px';
+        tail.style.width = '4px';
+        tail.style.height = '10px';
+        tail.style.background = 'rgba(33,150,243,0.18)';
+        tail.style.borderRadius = '50%';
+        tail.style.transform = 'scaleY(1.2)';
+        drop.appendChild(tail);
+
         document.body.appendChild(drop);
 
         const fall = drop.animate([
