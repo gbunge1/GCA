@@ -38,7 +38,7 @@ body {
 
 .give-btn {
   background-color: #fcd20f;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
@@ -93,6 +93,7 @@ body {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  color: #fff;
 }
 
 /* Hero Image */
