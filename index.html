@@ -29,6 +29,48 @@
       <img src="real-image.jpg" alt="Children at water pump">
     </div>
   </section>
+  <script>
+    // Simple confetti effect
+    function launchConfetti() {
+      const confettiColors = ['#fcd20f', '#76a9c3', '#fff', '#eaf6f9', '#333'];
+      for (let i = 0; i < 80; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'fixed';
+        confetti.style.zIndex = 9999;
+        confetti.style.width = '10px';
+        confetti.style.height = '10px';
+        confetti.style.borderRadius = '50%';
+        confetti.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = '-20px';
+        confetti.style.opacity = 0.8;
+        confetti.style.pointerEvents = 'none';
+        document.body.appendChild(confetti);
+
+        const fall = confetti.animate([
+          { transform: `translateY(0)` },
+          { transform: `translateY(${window.innerHeight + 40}px) rotate(${Math.random() * 360}deg)` }
+        ], {
+          duration: 1200 + Math.random() * 1200,
+          easing: 'ease-in'
+        });
+
+        fall.onfinish = () => confetti.remove();
+      }
+    }
+
+    // GIVE button in navbar
+    document.querySelector('.give-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      launchConfetti();
+    });
+
+    // GIVE NOW button in form
+    document.querySelector('.cta-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      launchConfetti();
+      // Optionally, you can handle form submission here
+    });
+  </script>
 </body>
-</html>
 </html>
