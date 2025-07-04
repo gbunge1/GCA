@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 
-.logo {
+/* .logo {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -28,12 +28,13 @@ body {
   font-size: 1.2rem;
   overflow: hidden;
   height: auto; /* Restore original alignment and height */
-}
+} */
 
 .logo img {
-  height: 400px;
-  width: auto;
-  display: block;
+  height: 40px;
+  /* display: block; */
+  position: static; /* or remove any position property */
+  z-index: 1; /* Lower z-index allows other elements with higher z-index to go above */
 }
 
 .give-btn {
