@@ -9,22 +9,27 @@
 body {
   background-color: #eaf6f9;
   color: #333;
+  font-weight: 400;
 }
 
 /* Navbar */
 .navbar {
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 0 2rem; /* Remove top/bottom padding, keep left/right */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo img {
-  width: auto; /* Adjusted to auto for better responsiveness */
-  height: 40px; /* Set a fixed height for consistency */
-  position: static; /* or remove any position property */
-  z-index: 1; /* Lower z-index allows other elements with higher z-index to go above */
+  width: auto;
+  height: 100px;
+  position: static;
+  z-index: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .give-btn {
@@ -51,40 +56,45 @@ body {
   max-width: 600px;
   color: white;
   padding-right: 2rem;
+  font-size: 1.5rem; /* Increase base font size */
 }
 
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .subheading {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #e6f3f8;
 }
 
 .cta-form {
   display: flex;
-  gap: 1rem;
-  max-width: 450px;
+  gap: 1.5rem;
+  max-width: 600px;
+  font-size: 1.2rem;
 }
 
 .cta-form input {
   flex: 1;
-  padding: 0.8rem;
+  padding: 1.2rem;
   border: none;
   border-radius: 5px;
+  font-size: 1.2rem;
 }
 
 .cta-form button {
   background-color: #fcd20f;
   border: none;
-  padding: 0.8rem 1.2rem;
+  padding: 1.2rem 2rem;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   color: #fff;
+  font-size: 1.2rem;
 }
 
 /* Hero Image */
