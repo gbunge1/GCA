@@ -20,19 +20,9 @@ body {
   align-items: center;
 }
 
-/* .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  overflow: hidden;
-  height: auto; /* Restore original alignment and height */
-} */
-
 .logo img {
-  height: 40px;
-  /* display: block; */
+  width: auto; /* Adjusted to auto for better responsiveness */
+  height: 40px; /* Set a fixed height for consistency */
   position: static; /* or remove any position property */
   z-index: 1; /* Lower z-index allows other elements with higher z-index to go above */
 }
